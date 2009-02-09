@@ -1,4 +1,5 @@
 # Build.PL
+use strict; use warnings;
 use Module::Build;
 
 my $build = Module::Build->new(
@@ -37,6 +38,9 @@ my $build = Module::Build->new(
 		# the FsV objects
 		'Filesys::Virtual::Async::inMemory'	=> 0,
 		'Filesys::Virtual::Async::Dispatcher'	=> 0,
+
+		# our minimum perl version
+		'perl'				=> '5.006',
 	},
 
 	# FIXME wishlist...
